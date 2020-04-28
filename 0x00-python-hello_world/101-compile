@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Compiling main.py ..."; python "$PYFILE">"$PYFILEc"
+python -m compileall "$PYFILE">"$PYFILEc"
