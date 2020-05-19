@@ -9,8 +9,8 @@ def safe_print_list_integers(my_list=[], x=0):
             print("{:d}".format(my_list[i]), end="")
             num_var += 1
         except TypeError:
-            pass
+            continue
         except ValueError:
-            pass
+            continue
     print()
     return (num_var)
