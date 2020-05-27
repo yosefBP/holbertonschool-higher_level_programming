@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""This is a module"""
 class Rectangle:
     """ Class that creates an object Rectangle """
     def __init__(self, width=0, height=0):
