@@ -1,4 +1,3 @@
-# 1-my_list.txt
 =======
 Doctest
 =======
@@ -10,23 +9,30 @@ Public instance method: def print_sorted(self): that prints the list,
 You can assume that all the elements of the list will be of type int.
 
 Test instance
--------------
+==============
 
-Test one argument
+** Test one argument **
 
 	>>> MyList = __import__('1-my_list').MyList
-	>>> test_list = MyList(10)
+	>>> my_list = MyList(10)
 	Traceback (most recent call last):
 		...
 	TypeError: 'int' object is not iterable
 
+
+** Test Instance **
+
+	>>> my_list = MyList()
+    >>> isinstance(my_list, MyList)
+    True
+
+
 Test method
------------
+============
 
-call method with an argument
+** call method with an argument **
 
-	>>> test_list = MyList()
-	>>> test_list.print_sorted(4)
+	>>> my_list.print_sorted(4)
 	Traceback (most recent call last):
 		...
 	TypeError: print_sorted() takes 1 positional argument but 2 were given
