@@ -19,7 +19,7 @@ Test instance
 	>>> my_test = BaseGeometry(10)
 	Traceback (most recent call last):
 		...
-	TypeError: BaseGeometry() takes no arguments
+	TypeError: object() takes no parameters
 
 
 ** Test  with two arguments **
