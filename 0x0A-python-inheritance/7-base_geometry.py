@@ -15,7 +15,7 @@ class BaseGeometry:
         """This method validates *value is not an integer:
             raise a TypeError; is less or equal to 0:
             raise a ValueError"""
-        message1 = name + ' must be an integer'
+        message1 = "{:s} must be an integer".format(name)
         message2 = name + ' must be an integer'
         if isinstance(value, int) is False:
             raise TypeError(message1)
