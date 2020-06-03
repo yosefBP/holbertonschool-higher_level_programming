@@ -1,0 +1,66 @@
+=====================
+Doctest base_geometry
+=====================
+
+Class BaseGeometry:
+
+Contains two methods Integer validator:
+	integer_validator(self, name, value)
+and other empty method:
+	area(self)
+both handles exceptions
+
+Test instance
+==============
+
+** Test one argument **
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> my_test = BaseGeometry(10)
+	Traceback (most recent call last):
+		...
+	TypeError: BaseGeometry() takes no arguments
+
+
+** Test  with two arguments **
+
+    >>> my_test = BaseGeometry(6, 2)
+    Traceback (most recent call last):
+		...
+    TypeError: BaseGeometry() takes no arguments
+
+
+** Test Instance **
+
+	>>> my_test = BaseGeometry()
+    >>> isinstance(my_test, BaseGeometry)
+    True
+
+
+** Test	Type MyList **
+
+    >>> type(my_test) == BaseGeometry
+    True
+
+
+Test method
+============
+
+** call method with an argument **
+
+	>>> my_test.area(4)
+	Traceback (most recent call last):
+		...
+	TypeError: area() takes 1 positional argument but 2 were given
+
+** Print List **
+
+	>>> my_test = BaseGeometry()
+	>>> my_test.area()
+	Traceback (most recent call last):
+		...
+	Exception: area() is not implemented
+	>>> my_test.integer_validator()
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
