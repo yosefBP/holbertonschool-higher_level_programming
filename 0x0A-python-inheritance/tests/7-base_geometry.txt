@@ -98,3 +98,8 @@ Test method
 	Traceback (most recent call last):
 		...
 	ValueError: String must be greater than 0
+	>>> my_test.integer_validator("String", [3])
+	Traceback (most recent call last):
+		...
+	TypeError: String must be an integer
+	>>> my_test.integer_validator("String", True)
