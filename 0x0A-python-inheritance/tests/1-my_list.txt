@@ -35,6 +35,12 @@ Test instance
     True
 
 
+** Test	Type MyList **
+
+    >>> type(my_list) == MyList
+    True
+
+
 Test method
 ============
 
@@ -44,3 +50,17 @@ Test method
 	Traceback (most recent call last):
 		...
 	TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+** Print List **
+
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
+	>>> my_list.append(8)
+	>>> my_list.append(5)
+	>>> my_list.append(-10)
+	>>> my_list
+	[8, 5, -10]
+	>>> my_list.print_sorted()
+	[-10, 5, 8]
+
