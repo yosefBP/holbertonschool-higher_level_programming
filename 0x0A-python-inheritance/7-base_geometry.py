@@ -17,7 +17,7 @@ class BaseGeometry:
             raise a ValueError"""
         message1 = name + ' must be an integer'
         message2 = name + ' must be greater than 0'
-        if isinstance(value, int) is False:
+        if type(value) != int:
             raise TypeError(message1)
         if value <= 0:
             raise ValueError(message2)
