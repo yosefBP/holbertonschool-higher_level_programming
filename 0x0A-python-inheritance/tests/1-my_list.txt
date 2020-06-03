@@ -1,5 +1,16 @@
+*********
+Doctest
+*********
+
 class MyList that inherits from list:
 
 Public instance method: def print_sorted(self): that prints the list,
  but sorted (ascending sort)
-You can assume that all the elements of the list will be of type int
+You can assume that all the elements of the list will be of type int.
+
+Test instance
+**************
+>>> test_list = MyList(10)
+Traceback (most recent call last):
+    	...
+TypeError: 'int' object is not iterable
