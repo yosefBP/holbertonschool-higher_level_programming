@@ -12,22 +12,25 @@ You can assume that all the elements of the list will be of type int.
 Test instance
 -------------
 
+	Test one argument
+
 	>>> MyList = __import__('1-my_list').MyList
 	>>> test_list = MyList(10)
 	Traceback (most recent call last):
     	...
 	TypeError: 'int' object is not iterable
 
-Test two arguments
-------------------
+	Test two arguments
 
-	>>> test_list =  MyList(7, 1)
-	Traceback (most recent call last):
-		...
-	TypeError: list expected at most 1 argument, got 2
+		>>> test_list =  MyList(7, 1)
+		Traceback (most recent call last):
+			...
+		TypeError: list expected at most 1 argument, got 2
 
 Test method
 -----------
+
+	call method with an argument
 
 	>>> test_list = MyList()
 	>>> test_list.print_sorted(4)
