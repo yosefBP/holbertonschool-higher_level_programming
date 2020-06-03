@@ -109,3 +109,4 @@ Test method
 	Traceback (most recent call last):
 		...
 	AttributeError: 'BaseGeometry' object has no attribute 'integervalidator'
+	>>> my_test.integer_validator("String", 12)
