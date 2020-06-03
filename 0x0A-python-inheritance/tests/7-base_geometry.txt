@@ -19,7 +19,7 @@ Test instance
 	>>> my_test = BaseGeometry(10)
 	Traceback (most recent call last):
 		...
-	TypeError: object() takes no parameters
+	TypeError: BaseGeometry() takes no arguments
 
 
 ** Test  with two arguments **
@@ -74,7 +74,7 @@ Test method
 	Traceback (most recent call last):
 		...
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
-    >>> my_test.integer_validator("String", "1")
+    >>> my_test.integer_validator("String", "string")
     Traceback (most recent call last):
 		...
     TypeError: String must be an integer
@@ -86,7 +86,7 @@ Test method
     Traceback (most recent call last):
 		...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
-    >>> my_test.integer_validator("String", -92)
+    >>> my_test.integer_validator("String", -4)
     Traceback (most recent call last):
 		...
     ValueError: String must be greater than 0
@@ -94,3 +94,7 @@ Test method
     Traceback (most recent call last):
 		...
     TypeError: integer_validator() missing 1 required positional argument: 'value'
+	>>> my_test.integer_validator("String", 0)
+	Traceback (most recent call last):
+		...
+	ValueError: String must be greater than 0
