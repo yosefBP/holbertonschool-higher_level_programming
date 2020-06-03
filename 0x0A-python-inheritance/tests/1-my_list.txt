@@ -25,7 +25,7 @@ Test instance
     >>> my_list = MyList(6, 2)
     Traceback (most recent call last):
 		...
-    TypeError: list expected at most 1 argument, got 2
+    TypeError: list() takes at most 1 argument (2 given)
 
 
 ** Test Instance **
