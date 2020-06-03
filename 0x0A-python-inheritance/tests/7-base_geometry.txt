@@ -110,3 +110,7 @@ Test method
 		...
 	AttributeError: 'BaseGeometry' object has no attribute 'integervalidator'
 	>>> my_test.integer_validator("String", 12)
+	>>> my_test.integer_validator("String", {3, 8})
+	Traceback (most recent call last):
+		...
+	TypeError: String must be an integer
