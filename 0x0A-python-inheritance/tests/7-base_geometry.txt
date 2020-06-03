@@ -37,6 +37,12 @@ Test instance
     True
 
 
+** Test Subclass **
+
+    >>> issubclass(type(my_test), BaseGeometry)
+    True
+
+
 ** Test	Type MyList **
 
     >>> type(my_test) == BaseGeometry
@@ -56,6 +62,10 @@ Test method
 ** Print List **
 
 	>>> my_test = BaseGeometry()
+	>>> type(my_test.area)
+	<class 'method'>
+	>>> type(my_test.integer_validator)
+	<class 'method'>
 	>>> my_test.area()
 	Traceback (most recent call last):
 		...
