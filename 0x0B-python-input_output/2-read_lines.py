@@ -8,7 +8,7 @@ def read_lines(filename="", nb_lines=0):
     """
     with open(filename, encoding="utf-8") as file:
         num_lines = file.readlines()
-        if nb_lines <= 0:
+        if nb_lines <= 0 or nb_lines >= len(num_lines):
             for i in num_lines:
                 print(i, end='')
         elif len(num_lines) > 0:
