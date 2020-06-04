@@ -11,6 +11,6 @@ def read_lines(filename="", nb_lines=0):
         if nb_lines == 0:
             for i in num_lines:
                 print(i, end='')
-        if len(num_lines) > 0:
+        elif len(num_lines) > 0:
             for i in range(0, nb_lines):
                 print(num_lines[i], end='')
