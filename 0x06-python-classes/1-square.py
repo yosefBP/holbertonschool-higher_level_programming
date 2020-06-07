@@ -4,4 +4,6 @@
 
 class Square:
     """Private instance attribute: size"""
-    __size = 0
+    def __init__(self)
+    """Function constructor"""
+    self.__size = size
