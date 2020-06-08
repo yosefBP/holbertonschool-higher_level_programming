@@ -60,7 +60,6 @@ class Square:
         if self.__size == 0:
             print()
         else:
-            if self.__position[1] > 0:
-                print()
+            print('\n' * self.__position[1])
             for row in range(self.__size):
                 print("{}{}".format(' '*self.__position[0], char*self.__size))
