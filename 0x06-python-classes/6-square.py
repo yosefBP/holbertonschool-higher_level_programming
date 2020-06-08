@@ -8,13 +8,8 @@ class Square:
         """Function constructor"""
         if isinstance(size, int) is False:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
-        elif isinstance(position[0], int) is False or\
-                isinstance(position[1], int) is False or\
-                len(position) != 2 or\
-                isinstance(position, tuple) is False:
-            raise TypeError("position must be a tuple of 2 positive integers")
         self.__size = size
         self.position = position
 
@@ -42,13 +37,14 @@ class Square:
     @position.setter
     def position(self, value):
         """position must be a tuple of 2 positive integers"""
-        if isinstance(value[0], int) is False or\
-                isinstance(value[1], int) is False or\
-                len(value) != 2 or\
-                isinstance(value, tuple) is False:
+        if len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        else:
-            self.__position = value
+        if isinstance(value, tuple) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        if isinstance(value[0], int) is False or\
+                isinstance(value[1], int) is False:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         """Public instance method that returns the current square area"""
