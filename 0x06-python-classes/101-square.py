@@ -71,7 +71,7 @@ class Square:
         for i in range(self.__position[1]):
             obj_square += "\n"
         for j in range(self.size):
-            obj_square += "{}{}".format(' '*self.__position[0], '#'*self.__size)
+            obj_square += "{}{}".format(' '*self.position[0], '#'*self.__size)
             if j != (self.size - 1):
                 obj_square += "\n"
         return obj_square
