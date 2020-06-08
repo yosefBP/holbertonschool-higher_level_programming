@@ -56,11 +56,11 @@ class Square:
         """Public instance method that prints in stdout the square with the
         character #
         """
-        character = '#'
+        char = '#'
         if self.__size == 0:
             print()
         else:
             if self.__position[1] > 0:
                 print()
             for row in range(self.__size):
-                print("{}{}".format('' * self.__position[0], character * self.__size))
+                print("{}{}".format(' '*self.__position[0], char*self.__size))
