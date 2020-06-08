@@ -18,11 +18,6 @@ class Square:
         """Public instance method Get that returns the current value of size"""
         return self.__size
 
-    @property
-    def position(self):
-        """Private instance attribute: position """
-        return self.__position
-
     @size.setter
     def size(self, value):
         """Public instance method set that validate an change the current
@@ -33,6 +28,11 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
+
+    @property
+    def position(self):
+        """Private instance attribute: position """
+        return self.__position
 
     @position.setter
     def position(self, value):
