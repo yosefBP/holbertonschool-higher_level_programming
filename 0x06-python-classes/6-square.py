@@ -10,9 +10,6 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        if position[0] < 0 or position[1] < 0 or position[1] is None or\
-                isinstance(position, tuple) is False:
-            raise TypeError("position must be a tuple of 2 positive integers")
         self.__size = size
         self.__position = position
 
@@ -41,8 +38,10 @@ class Square:
     def position(self, value):
         """position must be a tuple of 2 positive integers"""
         if value[0] < 0 or value[1] < 0 or value[1] is None or\
-                isinstance(value, tuple) is False:
+                isinstance(value, tuple) is False or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            self.__position = value
 
     def area(self):
         """Public instance method that returns the current square area"""
