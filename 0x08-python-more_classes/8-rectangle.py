@@ -53,7 +53,7 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """staticmethod "that returns the biggest rectangle based on the area"""
+        """staticmethod that returns the biggest rectangle based on the area"""
         obj_rectangle = ''
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
@@ -64,7 +64,6 @@ class Rectangle:
         else:
             obj_rectangle = rect_2
         return obj_rectangle
-
 
     def area(self):
         """Public instance method, that returns the rectangle area"""
