@@ -1,2 +1,2 @@
 -- script that lists all privileges of the MySQL users
-SHOW GRANTS;
+select * from information_schema.user_privileges;
