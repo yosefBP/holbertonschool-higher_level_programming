@@ -6,18 +6,14 @@ import MySQLdb
 
 if __name__ == "__main__":
     username = argv[1]
-    password = argv[2]
-    db_name = argv[3]
+    db_name = argv[2]
     db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=username,
-                         passwd=password,
                          db=db_name)
     cur = db.cursor()
-    cur.execute("SELECT states.id, name FROM states WHERE name "
-                "COLLATE latin1_general_cs "
-                "LIKE 'N%' "
-                "ORDER BY states.id ASC;")
+    cur.execute("SELECT * FROM states WHERE name"
+                "COLLATE latin1_general_cs LIKE 'N%' ORDER BY id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
