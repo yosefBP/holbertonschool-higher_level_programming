@@ -8,7 +8,7 @@ if __name__ == "__main__":
     username = argv[1]
     password = argv[2]
     db_name = argv[3]
-    db_conex = MySQLdb.connect(host="localhost", port=3306,
+    db = MySQLdb.connect(host="localhost", port=3306,
                                user=username, passwd=password,
                                db=db_name)
     cur = db.cursor()
@@ -18,4 +18,4 @@ if __name__ == "__main__":
         print(row)
 
     cur.close()
-    db_conex.close()
+    db.close()
