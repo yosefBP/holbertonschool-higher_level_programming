@@ -9,8 +9,8 @@ if __name__ == "__main__":
     password = argv[2]
     db_name = argv[3]
     db_conex = MySQLdb.connect(host="localhost", port=3306,
-                         user=username, passwd=password,
-                         db=db_name)
+                               user=username, passwd=password,
+                               db=db_name)
     cur = db_conex.cursor()
     cur.execute("SELECT states.id, name FROM states ORDER BY states.id ASC;")
     rows = cur.fetchall()
