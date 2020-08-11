@@ -4,7 +4,6 @@
 from sys import argv
 import MySQLdb
 
-
 if __name__ == "__main__":
     username = argv[1]
     password_ = argv[2]
