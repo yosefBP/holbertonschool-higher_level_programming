@@ -15,7 +15,7 @@ if __name__ == "__main__":
                                passwd=password_,
                                db=db_name)
     cur = db_conex.cursor()
-    query = """SELECT states.id, states.name FROM states WHERE name='{:s}'
+    query = """SELECT states.id, name FROM states WHERE name='{:s}'
     COLLATE latin1_general_cs ORDER BY states.id ASC;""".format(name_searched)
     cur.execute(query)
     rows = cur.fetchall()
