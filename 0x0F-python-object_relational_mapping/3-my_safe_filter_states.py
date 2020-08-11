@@ -16,7 +16,7 @@ if __name__ == "__main__":
     cur = db_conex.cursor()
     query = """SELECT states.id, name FROM states WHERE name= %(name)s COLLATE
     latin1_general_cs ORDER BY states.id ASC;"""
-    arg = {"name":argv[4]}
+    arg = {"name": argv[4]}
     cur.execute(query, arg)
     rows = cur.fetchall()
 
