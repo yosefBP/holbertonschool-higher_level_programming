@@ -1,3 +1,3 @@
 #!/bin/bash
-# status code 
-curl -w "%{response_code}\n" "$1"
+# status code or response_code
+curl -w "%{http_code}\n" "$1"
