@@ -6,5 +6,6 @@ def roman_to_int(roman_string):
     rm = roman_string
     dlist = [Rm[i[0]] if Rm[i[0]] >= Rm[i[1]] else (-1*Rm[i[0]])
              for i in zip(rm, rm[1:] + rm[-1])]
+    print(dlist)
     dec = sum(dlist)
     return (dec)
